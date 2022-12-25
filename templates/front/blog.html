@@ -23,29 +23,29 @@
     <div class="main main-raised">
       <div class="container">
         <div class="row">
-            {% for title, link,konten,date,i in mylist  %}
+            {% for a in berita  %}
           <div class="col-lg-4 col-md-6">
             <div class="card card-blog card-plain">
               <div class="card-image">
-                <a href="{{link}}">
-                  <img class="img rounded" src="{{i.small}}">
+                <a href="{{a.link}}">
+                  <img class="img rounded" src={{a.gambar}}>
                 </a>
               </div>
               <div class="card-body">
                 <h6 class="category text-primary">CNN</h6>
                 <h4 class="card-title">
-                  <a href="javascript:;">{{title}}</a>
+                  <a href="javascript:;">{{a.title}}</a>
                 </h4>
                 <p class="card-description">
-                 {{konten}}
+                 {{a.konten}}
                 </p>
                 <div class="card-footer">
                   <div class="author">
                     <img src="{% static 'front/img/p10.jpg' %}" alt="..." class="avatar img-raised">
-                    <span>{{user}}</span>
+                    <span>{{a.user}}</span>
                   </div>
                   <div class="stats stats-right">
-                    <i class="tim-icons icon-watch-time"></i> {{date}}
+                    <i class="tim-icons icon-watch-time"></i> {{a.date}}
                   </div>
                 </div>
               </div>

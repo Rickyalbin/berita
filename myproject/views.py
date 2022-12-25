@@ -35,29 +35,13 @@ def index(request):
     return render(request, template_name, context)
 
 def blog(request):
-    url = "https://berita-indo-api.vercel.app/v1/cnn-news"
-
-    data = requests.get(url).json()
-
-    a = data['data']
-    title = []
-    link = []
-    konten = []
-    date = []
-    gambar = []
-
-    for i in range(len(a)):
-        f = a[i]
-        link.append(f['link'])
-        title.append(f['title'])
-        konten.append(f['contentSnippet'])
-        date.append(f['isoDate'])
-        gambar.append(f['image'])
-
-    mylist = zip(title, link,konten,date,gambar)
-    context ={'mylist':mylist}
-
-    return render(request, 'front/blog.html', context)
+    template_name = 'front/blog.html'
+    berita = Berita.objects.all()
+    context = {
+        'title':'Detail Artikel',
+        'berita':berita
+    }
+    return render(request, template_name, context)
 
 
 def detail_artikel(request, id):

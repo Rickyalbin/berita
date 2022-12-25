@@ -45,11 +45,11 @@ class Artikel(models.Model):
 
 class Berita(models.Model):
     
-    title = models.CharField(max_length=100)
-    link = models.CharField(max_length=100)
+    title = models.CharField(max_length=1000)
+    link = models.CharField(max_length=1000)
     konten = models.TextField()
-    date = models.CharField(max_length=100)
-    gambar = models.CharField(max_length=100)
+    date = models.CharField(max_length=1000)
+    gambar = models.CharField(max_length=1000)
 
     def _str_(self) :
         return "{}" - "{}".format(self.nama, self.judul)
