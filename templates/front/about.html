@@ -1,0 +1,224 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="page-header">
+      <img src="{% static 'front/img/dots.png' %}" class="dots">
+      <img src="{% static 'front/img/path4.png' %}" class="path">
+      <div class="container align-items-center">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <h1 class="profile-title text-left">Ricky Albin Pranata</h1>
+            <h2 class="">2011102441017</h2>
+            <p class="profile-description">Jurusan Teknik Informatika Kelas A Pemrograman Web Lanjut</p>
+            <div class="btn-wrapper profile pt-3">
+              <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-facebook btn-round" data-toggle="tooltip" data-original-title="Like us">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a target="_blank" href="https://instagram.com/creativetim" class="btn btn-icon btn-instagram  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+            <div class="card card-coin card-plain">
+              <div class="card-header">
+                <img src="{% static 'front/img/albin.jpeg' %}" class="img-center img-fluid rounded-circle">
+                <h4 class="title">Ricky Albin Pranata</h4>
+              </div>
+              <div class="card-body">
+                <ul class="nav nav-tabs nav-tabs-primary justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#linka">
+                      Profile
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content tab-subcategories">
+                  <div class="tab-pane active" id="linka">
+                    <div class="table-responsive">
+                      <table class="table tablesorter " id="plain-table">
+                        <thead class=" text-primary">
+                          <tr>
+                            <th class="header">
+                              Umur
+                            </th>
+                            <th class="header">
+                              Hobi
+                            </th>
+                            <th class="header">
+                              Kuliah
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              20 Thn
+                            </td>
+                            <td>
+                              Fitness
+                            </td>
+                            <td>
+                              UMKT
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="linkb">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Pay to</label>
+                      <div class="col-sm-9">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="e.g. 1Nasd92348hU984353hfid">
+                          <span class="form-text">Please enter a valid address.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Amount</label>
+                      <div class="col-sm-9">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="1.587">
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-simple btn-primary btn-icon btn-round float-right"><i class="tim-icons icon-send"></i></button>
+                  </div>
+                  <div class="tab-pane" id="linkc">
+                    <div class="table-responsive">
+                      <table class="table tablesorter " id="plain-table">
+                        <thead class=" text-primary">
+                          <tr>
+                            <th class="header">
+                              Latest Crypto News
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              The Daily: Nexo to Pay on Stable...
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Venezuela Begins Public of Nation...
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              PR: BitCanna – Dutch Blockchain...
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-6">
+            <div class="row justify-content-between align-items-center">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block" src="{% static 'front/img/ricky1.jpeg' %}" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>City Centrum Samarinda</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="{% static 'front/img/ricky2.jpeg' %}" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Betapus Lempake Samarinda</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block" src="{% static 'front/img/ricky3.jpeg' %}" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Pantai Pemedas, Samboja</h5>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <i class="tim-icons icon-minimal-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <i class="tim-icons icon-minimal-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <h1 class="profile-title text-left">Tentang Saya</h1>
+            <p class="profile-description text-left">Perkenalkan nama saya Ricky Albin Pranata kuliah di Universitas Muhammadiyah Kalimantan Timur dengan nim 2011102441017 sedang menjalani semester 5(GANJIL) </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="title">Ricky Albin Pranata</h1>
+          </div>
+          <div class="col-md-3 col-6">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="{% static 'front/index.html' %}" class="nav-link">
+                  Home
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="{% url 'contact' %}" class="nav-link">
+                  Contact Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link">
+                  About Us
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">Follow us:</h3>
+            <div class="btn-wrapper profile text-left">
+              <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-dribbble"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+{% endblock content %}

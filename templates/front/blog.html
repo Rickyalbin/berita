@@ -1,0 +1,59 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content  %}
+<div class="wrapper">
+    <div class="page-header page-header-small header-filter">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/ruvim-noga.jpg');">
+      </div>
+      <div class="content-center">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto text-center">
+            <h1 class="title">Berita Terbaru Dari CNN Indonesia</h1>
+            <a href="#button" class="btn btn-primary btn-round  btn-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#button" class="btn btn-primary btn-round  btn-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main main-raised">
+      <div class="container">
+        <div class="row">
+            {% for title, link,konten,date,i in mylist  %}
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-blog card-plain">
+              <div class="card-image">
+                <a href="{{link}}">
+                  <img class="img rounded" src="{{i.small}}">
+                </a>
+              </div>
+              <div class="card-body">
+                <h6 class="category text-primary">CNN</h6>
+                <h4 class="card-title">
+                  <a href="javascript:;">{{title}}</a>
+                </h4>
+                <p class="card-description">
+                 {{konten}}
+                </p>
+                <div class="card-footer">
+                  <div class="author">
+                    <img src="{% static 'front/img/p10.jpg' %}" alt="..." class="avatar img-raised">
+                    <span>{{user}}</span>
+                  </div>
+                  <div class="stats stats-right">
+                    <i class="tim-icons icon-watch-time"></i> {{date}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+     
+  </div>
+{% endblock content %}

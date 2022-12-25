@@ -1,0 +1,131 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="page-header header-filter contactus-3">
+      <div class="page-header-image" style="background-image: url({% static 'front/img/contact.jpg' %});"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="title">Ada Yang Ditanyakan?</h1>
+            <h3>Kami Ingin Berbicara Lebih Banyak Tentang Apa Yang Anda Butuhkan</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container-fluid">
+        <div class="row infos mb-5">
+          <div class="col-lg-3">
+            <div class="info info-hover">
+              <div class="icon icon-primary">
+                <img class="bg-blob" src="{% static 'front/img/feature-blob/primary.png' %}">
+                <i class="tim-icons icon-square-pin"></i>
+              </div>
+              <h4 class="info-title">ALamat</h4>
+              <p class="description">Jalan Proklamasi III No.16 RT 53</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="info info-hover">
+              <div class="icon icon-info">
+                <img class="bg-blob" src="{% static 'front/img/feature-blob/info.png' %}">
+                <i class="tim-icons icon-email-85"></i>
+              </div>
+              <h4 class="info-title">Email</h4>
+              <p class="description">2011102441017@umkt.ac.id</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="info info-hover">
+              <div class="icon icon-warning">
+                <img class="bg-blob" src="{% static 'front/img/feature-blob/warning.png' %}">
+                <i class="tim-icons icon-mobile"></i>
+              </div>
+              <h4 class="info-title">No Telepon</h4>
+              <p class="description">081287636863</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="info info-hover">
+              <div class="icon icon-success">
+                <img class="bg-blob" src="{% static 'front/img/feature-blob/success.png' %}">
+                <i class="tim-icons icon-single-02"></i>
+              </div>
+              <h4 class="info-title">Contact</h4>
+              <p class="description">Ricky Albin Pranata</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 mb-4 pt-5">
+          <div class="col-md-8 ml-auto mr-auto text-center mt-5">
+            <span class="badge badge-info">Tinggalkan Pesan</span>
+            <h1 class="title">Ceritakan lebih banyak tentang diri
+              <b>Anda</b>
+            </h1>
+            <h4 class="desc">Jika Ada Yang Ditanyakan Tentang Seputar Berita Berikutnya Bisa Tinggalkan Pesan Anda Lewat Email Diatas</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 mx-auto ">
+            <form role="form" class="p-3" id="contact-form" method="post">
+              <div class="card-body">
+                <div class="row">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contactUsMap" class="map"></div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="title">Ricky Albin Pranata</h1>
+          </div>
+          <div class="col-md-3 col-6">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link">
+                  Home
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="{% url 'contact' %}" class="nav-link">
+                  Contact Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link">
+                  About Us
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">Follow us:</h3>
+            <div class="btn-wrapper profile text-left">
+              <a target="_blank" href="https://www.youtube.com/@rickyalbin6431/videos" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a target="_blank" href="https://www.facebook.com" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-dribbble"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+{% endblock content %}

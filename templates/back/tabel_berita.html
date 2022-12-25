@@ -1,0 +1,52 @@
+{% extends 'back/base.html' %}
+
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bootstrap-table">
+                    <div class="card-body table-full-width">
+                        <div class="toolbar">
+                            <a class="btn btn-primary btn-sm" href="{% url 'sinkron_berita' %}">Sinkron Berita</a> &ensp;&ensp;&ensp;
+                            <!--        Here you can write extra buttons/actions for the toolbar              -->
+                        </div>
+                        <table id="bootstrap-table" class="table">
+                            <thead>
+                                <th data-field="state" data-checkbox="true"></th>
+                                <th data-field="id" class="text-center">Title</th>
+                                <th data-field="name" data-sortable="true">Link</th>
+                                <th data-field="salary" data-sortable="true">Konten</th>
+                                <th data-field="city">Date</th>
+                                <th data-field="country" data-sortable="true">Gambar</th>
+                            </thead>
+                            <tbody>
+
+
+                                {% for a in berita %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{a.title}}</td>
+                                    <td>{{a.link}}</td>
+                                    <td>{{a.date}}</td>
+                                    <td>{{a.gambar}}</td>
+                                    <td>
+                                    </td> 
+                                </tr>
+                                {% endfor %}
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+
+{% endblock js %}
